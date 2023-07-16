@@ -1,148 +1,161 @@
- /* use to google font work sans  */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,500;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+/* work sans font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;700;800&family=Work+Sans:wght@400;500;600;700;800&display=swap');
 
-*{
+/* shared styles */
+* {
+    font-family: 'Lato', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
     font-family: 'Work Sans', sans-serif;
 }
-/* heard  styles  */
 
-header{
-    background-color: rgba(255, 144, 14, 0.10);
-    padding:50px 240px;
+.text-light-gray {
+    color: #727272;
 }
 
-nav{
+.btn-primary {
+    border-radius: 8px;
+    color: #FFF;
+    font-size: 1.25rem;
+    background: #FF900E;
+    padding: 20px 25px;
+    color: #FFF;
+    cursor: pointer;
+    border: 0;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #131313;
+}
+
+/* header styles */
+header {
+    background: rgba(255, 144, 14, 0.10);
+    padding: 50px 240px;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
-    align-items:center ;
+    align-items: center;
 }
 
-.nav-title{
-    font-size:2.8rem;
-    font-weight: 700px;
-    color:#131313;
-}
 
-nav > ul {
+
+nav>ul {
     display: flex;
-
 }
 
-nav li{
+nav li {
     list-style: none;
-    margin-left: 30px;
-    font-weight: 500px;
-    font-size: 1rem;
-    
-}
-
-nav li a{
-    text-decoration: none;
-    color: #424242;
-    
-    
-}
-
-/* banner styles */
-
-.banner-title{
-    font-weight: 700px;
-    font-size: 64px;
-    color:#131313;
-}
-
-.banner-descrption{
-    color:#727272;
+    margin-right: 30px;
     font-weight: 500;
     font-size: 1rem;
 }
-.btn-primary{
-    width: 180px;
-    height: 4rem;
-    border-radius: 8px;
-    background: #FF900E;
-    border: 0px;
-    color:#FFF;
-    cursor: pointer;
+
+nav li a {
+    text-decoration: none;
+    color: #424242;
 }
 
-.banner-container{
+/* banner styles */
+.banner-content {
     max-width: 800px;
     text-align: center;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
-.banner img{
+.banner-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #131313;
+}
+
+.banner img {
     margin-top: 20px;
     width: 100%;
 }
 
-/* responsive Media Query */
-/* mobile devices */
 
-@media screen and (max-width:576px) {
-    header{
-        padding:20px;
-    }
-    nav{
-        flex-direction: column;
-    }
-   
+
+/* main styles */
+main {
+    max-width: 1440px;
+    margin: 70px auto;
 }
 
-/* mediyam devices */
-
-@media screen and (min-width: 576px) and (max-width: 960px){
-   
-    nav{
-      flex-direction: column;
-    }
-    header{
-        padding:50px;
-    }
-}
-
-/* main reled styls */
-
-main{
-    width: 1440px;
-    margin: 0px auto;
-}
-
-/* teams style */
-
-.teams-container{
+/* teams styles */
+.teams-container {
     display: flex;
     align-items: center;
 }
-.teams-images-container{
+
+.teams-img-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
-.teams-content{
+
+.teams-content {
     padding-left: 70px;
     padding-right: 70px;
 }
-.teams-title{
-    font-size: 2.9rem;
-}
-.teams-title .quick-list{
-    color:#727272;
-    font-weight: 500px;
 
+.teams-title {
+    font-size: 2.8rem;
 }
 
-.teams-title .our{
+.teams-title .quick-list {
+    font-weight: 500;
+}
+
+.teams-title .text-features {
+    color: #FF900E;
+    font-weight: 700;
+}
+
+/* feature section styles */
+
+
+
+/* sponsors styles */
+
+
+/* responsive media queries */
+/* mobile devices */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 20px;
+    }
+
+    nav,
+    .teams-container {
+        flex-direction: column;
+    }
+
     
-    color:#131313;
-    font-weight: 500px;
-   }
 
-.teams-title, .text-features{
-    color:#FF900E;
-    font-weight: 700px;
+    .teams-img-container {
+        grid-template-columns: 1fr;
+    }
 
+    .teams-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    
+}
+
+/* tablet or medium devices */
+@media screen and (min-width:576px) and (max-width: 960px) {
+    header {
+        padding: 50px;
+    }
+
+    nav,
+    .teams-container{
+        flex-direction: column;
+    }
 }
